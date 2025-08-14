@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/button";
 
-function SendForm() {
+function SendForm({ onselectedFriend }) {
   return (
     <>
       <h2>Send Transaction</h2>
@@ -26,7 +26,9 @@ function SendForm() {
         <label> 🤑 Are you sending or recieving</label>
         <select>
           <option value="user">You</option>
-          <option value="friend">x</option>
+          <option value="friend">
+            {onselectedFriend?.name || "No friend selected.."}
+          </option>
         </select>
 
         <Button>Send</Button>

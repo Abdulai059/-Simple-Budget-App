@@ -3,7 +3,7 @@ import Button from "./Button/button";
 import SendForm from "./Forms/SendForm";
 import ReceiveForm from "./Forms/ReceiveForm";
 
-function TransactionForm() {
+function TransactionForm({ selectFriend }) {
   const [activeForm, setActiveForm] = useState("send"); // "send here is a default ui to appear"
 
   return (
@@ -14,8 +14,7 @@ function TransactionForm() {
           Received Crypto
         </Button>
       </div>
-
-      {activeForm === "send" && <SendForm />}
+      {activeForm === "send" && <SendForm onselectedFriend={selectFriend} />}
       {activeForm === "receive" && <ReceiveForm />}
     </div>
   );

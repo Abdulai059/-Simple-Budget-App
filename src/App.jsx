@@ -33,13 +33,13 @@ export default function App() {
               friends={friends}
               selectFriend={selectFriend}
               onDeleteFriend={handleDeleteFriend}
-                onSelection={handleSelection}
+              onSelection={handleSelection}
             />
 
             <Addfriend onAddFriend={handleAddFriend} />
           </div>
 
-          <TransactionForm />
+          <TransactionForm selectFriend={selectFriend} />
         </div>
       </div>
     </>
